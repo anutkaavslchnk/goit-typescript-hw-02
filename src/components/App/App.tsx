@@ -64,7 +64,8 @@ const App = () => {
         setIsLoading(true);
         const response = await fetchGallery(query, page);
         setHits((prev) => [...prev, ...response.results]);
-        setShowLoadMore(response.total_pages && response.total_pages !== page);
+        setShowLoadMore(!!(response.total_pages && response.total_pages !== page));
+
       } catch (error) {
         setError(true);
       } finally {
