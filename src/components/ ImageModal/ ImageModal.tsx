@@ -1,5 +1,5 @@
-
 import Modal from 'react-modal';
+
 import s from './ ImageModal.module.css'
 
 Modal.setAppElement('#root'); 
